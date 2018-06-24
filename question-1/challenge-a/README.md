@@ -12,3 +12,4 @@ docker build -t test .
 docker run -it test python solution.py --host <redis-host> --port <redis-port> --db <redis-db> --mode=1
 ```
 * Replace placeholders in the above command with appropriate values.
+* For local testing where redis is running on a host machine, use `host.docker.internal` as host
