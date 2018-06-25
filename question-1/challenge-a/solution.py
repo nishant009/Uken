@@ -77,14 +77,13 @@ def main():
     )
     options, _ = parser.parse_args()
 
-    redis_insert = RedisInsert(
-        options.host,
-        options.port,
-        options.database,
-        options.mode
-    )
-
     try:
+        redis_insert = RedisInsert(
+            options.host,
+            options.port,
+            options.database,
+            options.mode
+        )
         start = time.time()
         redis_insert.do_inserts()
         end = time.time()
